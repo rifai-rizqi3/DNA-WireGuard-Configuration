@@ -28,21 +28,21 @@ https://www.wireguard.com/install/
   $ wg-quick up wg0
 ```
 # Stop 
-
+```
   $ wg-quick down wg0
-
+```
 # Remove Client
-
+```
   $ sudo wg set wg0 peer $1 remove <br>
-  
+```  
   contoh : sudo wg set wg0 peer 192.168.1.3 remove
   
 # Ubah client ke QR Code
-
+```
   $ qrencode -t utf8 < android2.conf
-
+```
 # Check status
-
+```
   $ wg show <br>
   interface: wg0 <br>
     public key: <SERVER PUBLIC KEY> <br>
@@ -61,9 +61,9 @@ https://www.wireguard.com/install/
     allowed ips: 192.168.1.3/32 <br>
     latest handshake: 9 seconds ago <br>
     transfer: 911.10 KiB received, 2.57 MiB sent <br>
-  
+```  
 # Adding Client (Sisi Client)
-  
+```  
   [Interface] <br>
   ##PrivateKey Client <br>
   PrivateKey = AGQ842obGBgmDYJm2T4N0YLG1eEdUQB+Ci6CTK2Z4Eo= <br>
@@ -77,15 +77,15 @@ https://www.wireguard.com/install/
   AllowedIPs = 0.0.0.0/0, ::/0 <br>
   ##IP SERVER & PORT SERVER <br>
   Endpoint = 167.71.223.20:52820
-  
+```  
  # Adding IP dan Public Key Client di Server
- 
+``` 
   $ wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client) <br>
-
+```
    contoh : wg set wg0 peer 9S9s5dEmRQDWK80kGSJA8Qc6m21dWrAM2HbJW3WR6SA= allowed-ips 192.168.1.16
    
  # Save Configuration
- 
+``` 
   $ sudo wg-quick save wg0
- 
+``` 
  

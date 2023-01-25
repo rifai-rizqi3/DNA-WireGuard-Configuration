@@ -66,16 +66,16 @@ https://www.wireguard.com/install/
   
   [Interface]
   ##PrivateKey Client
-  PrivateKey = AGQ842obGBgmDYJm2T4N0YLG1eEdUQB+Ci6CTK2Z4Eo=
-  ##IP Addres yang kosong di client
-  Address = 192.168.1.16/24
+  PrivateKey = AGQ842obGBgmDYJm2T4N0YLG1eEdUQB+Ci6CTK2Z4Eo= <br>
+  ##IP Addres yang kosong di client <br>
+  Address = 192.168.1.16/24 <br>
   DNS = 8.8.8.8,8.8.4.4
 
   [Peer]
   #Public Key Server 
   PublicKey = 96hfqF6QeUiTTjNaTu/mMg6FiqV4ZAzHxQStNdVb3DA= <br>
   AllowedIPs = 0.0.0.0/0, ::/0 <br>
-  ##IP SERVER & PORT SERVER
+  ##IP SERVER & PORT SERVER <br>
   Endpoint = 167.71.223.20:52820
   
  # Adding IP dan Public Key Client di Server

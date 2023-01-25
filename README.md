@@ -4,9 +4,9 @@
 https://www.wireguard.com/install/
 
 # Menyalakan VPN Service
-
+```
   $ systemctl enable wg-quick@wg0.service
-  
+``` 
 # Menonaktifkan VPN Service
 
   $ systemctl disabled wg-quick@wg0.service

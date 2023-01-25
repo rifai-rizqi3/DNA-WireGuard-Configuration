@@ -8,25 +8,25 @@ https://www.wireguard.com/install/
   $ systemctl enable wg-quick@wg0.service
 ``` 
 # Menonaktifkan VPN Service
-
+```
   $ systemctl disabled wg-quick@wg0.service
-  
+```  
 # Status VPN Service
-
+```
   $ systemctl status wg-quick@wg0.service
-
+```
 # Generete All Keys
-
+```
   $ wg genkey > server_privatekey <br>
   $ wg pubkey < server_privatekey > server_publickey_client1 <br>
   $ wg pubkey < server_privatekey > server_publickey_client2 <br>
   $ wg genkey | tee client1_privatekey | wg pubkey > client1_publickey <br>
   $ wg genkey | tee client2_privatekey | wg pubkey > client2_publickey <br>
-
+```
 # Start
-
+```
   $ wg-quick up wg0
-
+```
 # Stop 
 
   $ wg-quick down wg0

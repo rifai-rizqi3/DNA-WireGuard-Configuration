@@ -1,7 +1,7 @@
 # Simple-WireGuard-configuration
 
-# Getting started
 # Install Wireguard on all Machines
+https://www.wireguard.com/install/
 
 # Menyalakan VPN Service
 

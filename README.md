@@ -18,10 +18,10 @@ https://www.wireguard.com/install/
 # Generete All Keys
 ```
   $ wg genkey > server_privatekey <br>
-  $ wg pubkey < server_privatekey > server_publickey_client1 <br>
-  $ wg pubkey < server_privatekey > server_publickey_client2 <br>
-  $ wg genkey | tee client1_privatekey | wg pubkey > client1_publickey <br>
-  $ wg genkey | tee client2_privatekey | wg pubkey > client2_publickey <br>
+  $ wg pubkey < server_privatekey > server_publickey_client1 
+  $ wg pubkey < server_privatekey > server_publickey_client2 
+  $ wg genkey | tee client1_privatekey | wg pubkey > client1_publickey 
+  $ wg genkey | tee client2_privatekey | wg pubkey > client2_publickey 
 ```
 # Start
 ```

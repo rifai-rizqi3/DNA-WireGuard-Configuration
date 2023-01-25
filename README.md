@@ -72,9 +72,9 @@ https://www.wireguard.com/install/
   DNS = 8.8.8.8,8.8.4.4
 
   [Peer]
-  #Public Key Server
-  PublicKey = 96hfqF6QeUiTTjNaTu/mMg6FiqV4ZAzHxQStNdVb3DA=
-  AllowedIPs = 0.0.0.0/0, ::/0
+  #Public Key Server 
+  PublicKey = 96hfqF6QeUiTTjNaTu/mMg6FiqV4ZAzHxQStNdVb3DA= <br>
+  AllowedIPs = 0.0.0.0/0, ::/0 <br>
   ##IP SERVER & PORT SERVER
   Endpoint = 167.71.223.20:52820
   

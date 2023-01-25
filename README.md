@@ -33,7 +33,7 @@ https://www.wireguard.com/install/
 ```
 # Remove Client
 ```
-  $ sudo wg set wg0 peer $1 remove <br>
+  $ sudo wg set wg0 peer $1 remove 
 ```  
   contoh : sudo wg set wg0 peer 192.168.1.3 remove
   
@@ -43,44 +43,44 @@ https://www.wireguard.com/install/
 ```
 # Check status
 ```
-  $ wg show <br>
-  interface: wg0 <br>
-    public key: <SERVER PUBLIC KEY> <br>
-    private key: (hidden) <br>
-    listening port: 52820 <br>
-    fwmark: 0xca6c <br><br>
+  $ wg show 
+  interface: wg0 
+    public key: <SERVER PUBLIC KEY> 
+    private key: (hidden) 
+    listening port: 52820 
+    fwmark: 0xca6c 
 
-  peer: <CLIENT 1 PUBLIC KEY> <br>
-    endpoint: ... <br>
-    allowed ips: 192.168.1.2/32 <br>
-    latest handshake: 4 seconds ago <br>
-    transfer: 21.11 KiB received, 38.92 KiB sent <br><br>
+  peer: <CLIENT 1 PUBLIC KEY> 
+    endpoint: ... 
+    allowed ips: 192.168.1.2/32 
+    latest handshake: 4 seconds ago 
+    transfer: 21.11 KiB received, 38.92 KiB sent 
 
-  peer: <CLIENT 2 PUBLIC KEY> <br>
-    endpoint: ... <br>
-    allowed ips: 192.168.1.3/32 <br>
-    latest handshake: 9 seconds ago <br>
-    transfer: 911.10 KiB received, 2.57 MiB sent <br>
+  peer: <CLIENT 2 PUBLIC KEY> 
+    endpoint: ... 
+    allowed ips: 192.168.1.3/32 
+    latest handshake: 9 seconds ago 
+    transfer: 911.10 KiB received, 2.57 MiB sent 
 ```  
 # Adding Client (Sisi Client)
 ```  
-  [Interface] <br>
-  ##PrivateKey Client <br>
-  PrivateKey = AGQ842obGBgmDYJm2T4N0YLG1eEdUQB+Ci6CTK2Z4Eo= <br>
-  ##IP Addres yang kosong di client <br>
-  Address = 192.168.1.16/24 <br>
-  DNS = 8.8.8.8,8.8.4.4 <br><br>
+  [Interface] 
+  ##PrivateKey Client 
+  PrivateKey = AGQ842obGBgmDYJm2T4N0YLG1eEdUQB+Ci6CTK2Z4Eo= 
+  ##IP Addres yang kosong di client 
+  Address = 192.168.1.16/24 
+  DNS = 8.8.8.8,8.8.4.4 
 
-  [Peer] <br>
-  #Public Key Server  <br>
-  PublicKey = 96hfqF6QeUiTTjNaTu/mMg6FiqV4ZAzHxQStNdVb3DA= <br>
-  AllowedIPs = 0.0.0.0/0, ::/0 <br>
-  ##IP SERVER & PORT SERVER <br>
+  [Peer] 
+  #Public Key Server 
+  PublicKey = 96hfqF6QeUiTTjNaTu/mMg6FiqV4ZAzHxQStNdVb3DA= 
+  AllowedIPs = 0.0.0.0/0, ::/0 
+  ##IP SERVER & PORT SERVER 
   Endpoint = 167.71.223.20:52820
 ```  
  # Adding IP dan Public Key Client di Server
 ``` 
-  $ wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client) <br>
+  $ wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client) 
 ```
    contoh : wg set wg0 peer 9S9s5dEmRQDWK80kGSJA8Qc6m21dWrAM2HbJW3WR6SA= allowed-ips 192.168.1.16
    

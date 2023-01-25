@@ -17,11 +17,11 @@ https://www.wireguard.com/install/
 
 # Generete All Keys
 
-  $ wg genkey > server_privatekey
-  $ wg pubkey < server_privatekey > server_publickey_client1
-  $ wg pubkey < server_privatekey > server_publickey_client2
-  $ wg genkey | tee client1_privatekey | wg pubkey > client1_publickey
-  $ wg genkey | tee client2_privatekey | wg pubkey > client2_publickey
+  $ wg genkey > server_privatekey <br>
+  $ wg pubkey < server_privatekey > server_publickey_client1 <br>
+  $ wg pubkey < server_privatekey > server_publickey_client2 <br>
+  $ wg genkey | tee client1_privatekey | wg pubkey > client1_publickey <br>
+  $ wg genkey | tee client2_privatekey | wg pubkey > client2_publickey <br>
 
 # Start
 
@@ -33,7 +33,7 @@ https://www.wireguard.com/install/
 
 # Remove Client
 
-  $ sudo wg set wg0 peer $1 remove
+  $ sudo wg set wg0 peer $1 remove <br>
   
   contoh : sudo wg set wg0 peer 192.168.1.3 remove
   
@@ -43,36 +43,36 @@ https://www.wireguard.com/install/
 
 # Check status
 
-  $ wg show
-  interface: wg0
-    public key: <SERVER PUBLIC KEY>
-    private key: (hidden)
-    listening port: 52820
-    fwmark: 0xca6c
+  $ wg show <br>
+  interface: wg0 <br>
+    public key: <SERVER PUBLIC KEY> <br>
+    private key: (hidden) <br>
+    listening port: 52820 <br>
+    fwmark: 0xca6c <br><br>
 
-  peer: <CLIENT 1 PUBLIC KEY>
-    endpoint: ...
-    allowed ips: 192.168.1.2/32
-    latest handshake: 4 seconds ago
-    transfer: 21.11 KiB received, 38.92 KiB sent
+  peer: <CLIENT 1 PUBLIC KEY> <br>
+    endpoint: ... <br>
+    allowed ips: 192.168.1.2/32 <br>
+    latest handshake: 4 seconds ago <br>
+    transfer: 21.11 KiB received, 38.92 KiB sent <br><br>
 
-  peer: <CLIENT 2 PUBLIC KEY>
-    endpoint: ...
-    allowed ips: 192.168.1.3/32
-    latest handshake: 9 seconds ago
-    transfer: 911.10 KiB received, 2.57 MiB sent
+  peer: <CLIENT 2 PUBLIC KEY> <br>
+    endpoint: ... <br>
+    allowed ips: 192.168.1.3/32 <br>
+    latest handshake: 9 seconds ago <br>
+    transfer: 911.10 KiB received, 2.57 MiB sent <br>
   
 # Adding Client (Sisi Client)
   
-  [Interface]
-  ##PrivateKey Client
+  [Interface] <br>
+  ##PrivateKey Client <br>
   PrivateKey = AGQ842obGBgmDYJm2T4N0YLG1eEdUQB+Ci6CTK2Z4Eo= <br>
   ##IP Addres yang kosong di client <br>
   Address = 192.168.1.16/24 <br>
-  DNS = 8.8.8.8,8.8.4.4
+  DNS = 8.8.8.8,8.8.4.4 <br><br>
 
-  [Peer]
-  #Public Key Server 
+  [Peer] <br>
+  #Public Key Server  <br>
   PublicKey = 96hfqF6QeUiTTjNaTu/mMg6FiqV4ZAzHxQStNdVb3DA= <br>
   AllowedIPs = 0.0.0.0/0, ::/0 <br>
   ##IP SERVER & PORT SERVER <br>
@@ -80,7 +80,7 @@ https://www.wireguard.com/install/
   
  # Adding IP dan Public Key Client di Server
  
-  $ wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client)
+  $ wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client) <br>
 
    contoh : wg set wg0 peer 9S9s5dEmRQDWK80kGSJA8Qc6m21dWrAM2HbJW3WR6SA= allowed-ips 192.168.1.16
    

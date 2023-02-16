@@ -5,15 +5,15 @@ https://www.wireguard.com/install/
 
 # Menyalakan VPN Service
 ```
-  $ systemctl enable wg-quick@wg0.service
+ systemctl enable wg-quick@wg0.service
 ``` 
 # Menonaktifkan VPN Service
 ```
-  $ systemctl disabled wg-quick@wg0.service
+systemctl disabled wg-quick@wg0.service
 ```  
 # Status VPN Service
 ```
-  $ systemctl status wg-quick@wg0.service
+systemctl status wg-quick@wg0.service
 ```
 # Generete All Keys
 ```
@@ -25,21 +25,21 @@ https://www.wireguard.com/install/
 ```
 # Start
 ```
-  $ wg-quick up wg0
+wg-quick up wg0
 ```
 # Stop 
 ```
-  $ wg-quick down wg0
+wg-quick down wg0
 ```
 # Remove Client
 ```
-  $ sudo wg set wg0 peer $1 remove 
+sudo wg set wg0 peer $1 remove 
 ```  
   contoh : sudo wg set wg0 peer 192.168.1.3 remove
   
 # Ubah client ke QR Code
 ```
-  $ qrencode -t utf8 < android2.conf
+qrencode -t utf8 < android2.conf
 ```
 # Check status
 ```
@@ -80,12 +80,12 @@ https://www.wireguard.com/install/
 ```  
  # Adding IP dan Public Key Client di Server
 ``` 
-  $ wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client) 
+wg set wg0 peer (Public Key Client) allowed-ips (IP yang kosong untuk Client) 
 ```
    contoh : wg set wg0 peer 9S9s5dEmRQDWK80kGSJA8Qc6m21dWrAM2HbJW3WR6SA= allowed-ips 192.168.1.16
    
  # Save Configuration
 ``` 
-  $ sudo wg-quick save wg0
+sudo wg-quick save wg0
 ``` 
  
